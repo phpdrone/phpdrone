@@ -6,6 +6,15 @@ weight: 15
 
 Allows for creating PHP based plugins.
 
+### Using with composer
+
+
+```bash
+$ composer require phpdrone/drone-plugin-sdk:~0.1
+```
+
+### Example
+
 ```php
 <?php
 require __DIR__."/vendor/autoload.php";
@@ -14,7 +23,13 @@ require __DIR__."/vendor/autoload.php";
 $build = new \DronePluginSdk\Build();
 
 // Get some settings :
-var_dump($build->getPluginParameter('my_parameter'));```
+var_dump($build->getPluginParameter('my_parameter'));
 ```
 
-Full API documentation is available at http://phpdrone.github.io/drone-plugin-sdk/
+### Full example
+
+See [the example included on Github](https://github.com/phpdrone/drone-plugin-sdk/tree/master/example)
+
+### API documentation
+
+See [the full API documentation](https://phpdrone.github.io/drone-plugin-sdk/)

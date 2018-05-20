@@ -21,4 +21,4 @@ written in PHP.
 ### Docker images
 
 Docker images are also provided for other tasks, eg, an nginx web server,
-a [Composer ](http://getcomposer.org/) Docker image
+a [Composer](http://getcomposer.org/) Docker image
