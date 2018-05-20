@@ -3,7 +3,8 @@ pipeline:
     image: webhippie/hugo:latest
     commands:
       - "[ ! -d themes ] && mkdir themes && git clone https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn"
-      - hugo
+      - wget https://github.com/gohugoio/hugo/releases/download/v0.40.3/hugo_0.40.3_Linux-64bit.tar.gz -O -|tar -xzv
+      - ./hugo
 
   deploy-site:
     image: fpfis/drone-plugin-git-deploy
