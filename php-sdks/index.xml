@@ -17,7 +17,8 @@
       
       <guid>https://phpdrone.github.io/php-sdks/drone-plugin-sdk/</guid>
       <description>Allows for creating PHP based plugins.
-&amp;lt;?php require __DIR__.&amp;quot;/vendor/autoload.php&amp;quot;; // Get the build : $build = new \DronePluginSdk\Build(); // Get some settings : var_dump($build-&amp;gt;getPluginParameter(&#39;my_parameter&#39;));```  Full API documentation is available at http://phpdrone.github.io/drone-plugin-sdk/</description>
+Using with composer $ composer require phpdrone/drone-plugin-sdk:~0.1  Example &amp;lt;?php require __DIR__.&amp;quot;/vendor/autoload.php&amp;quot;; // Get the build : $build = new \DronePluginSdk\Build(); // Get some settings : var_dump($build-&amp;gt;getPluginParameter(&#39;my_parameter&#39;));  Full example See the example included on Github
+API documentation See the full API documentation</description>
     </item>
     
   </channel>

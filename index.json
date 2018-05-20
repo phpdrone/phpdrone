@@ -4,7 +4,7 @@
 	"title": "Drone Plugin PHP SDK",
 	"tags": [],
 	"description": "",
-	"content": "Allows for creating PHP based plugins.\n\u0026lt;?php require __DIR__.\u0026quot;/vendor/autoload.php\u0026quot;; // Get the build : $build = new \\DronePluginSdk\\Build(); // Get some settings : var_dump($build-\u0026gt;getPluginParameter('my_parameter'));```  Full API documentation is available at http://phpdrone.github.io/drone-plugin-sdk/\n"
+	"content": " Allows for creating PHP based plugins.\nUsing with composer $ composer require phpdrone/drone-plugin-sdk:~0.1  Example \u0026lt;?php require __DIR__.\u0026quot;/vendor/autoload.php\u0026quot;; // Get the build : $build = new \\DronePluginSdk\\Build(); // Get some settings : var_dump($build-\u0026gt;getPluginParameter('my_parameter'));  Full example See the example included on Github\nAPI documentation See the full API documentation\n"
 },
 {
 	"uri": "https://phpdrone.github.io/categories/",
@@ -18,14 +18,14 @@
 	"title": "PHP SDKs",
 	"tags": [],
 	"description": "",
-	"content": "There are 2 SDKs availalbe to interact with Drone :\n Client SDK Plugin SDK  "
+	"content": " There are 2 SDKs availalbe to interact with Drone :\nPlugin SDK The plugins SDK allows for easy creation of PHP based plugins.\n$build = new \\DronePluginSdk\\Build();  Client SDK The client SDK allows for interactions with Drone server.\n$api_instance = new DroneClient\\Api\\BuildsApi();  "
 },
 {
 	"uri": "https://phpdrone.github.io/",
 	"title": "PHPDrone documentation",
 	"tags": [],
 	"description": "",
-	"content": " Introduction The PhpDrone organisation aims a providing unified resources and plugins towards usage of Drone for PHP continuous integration, delivery and deployment.\nSDKs Two SDKs are currently maintained, one for client and one for plugins.\nPlugins We are providing multiple dedicated Drone plugins, both aimed toward PHP or written in PHP.\nDocker images Docker images are also provided for other tasks, eg, an nginx web server, a Composer  Docker image\n"
+	"content": " Introduction The PhpDrone organisation aims a providing unified resources and plugins towards usage of Drone for PHP continuous integration, delivery and deployment.\nSDKs Two SDKs are currently maintained, one for client and one for plugins.\nPlugins We are providing multiple dedicated Drone plugins, both aimed toward PHP or written in PHP.\nDocker images Docker images are also provided for other tasks, eg, an nginx web server, a Composer Docker image\n"
 },
 {
 	"uri": "https://phpdrone.github.io/tags/",
