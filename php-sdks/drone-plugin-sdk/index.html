@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>PHPDrone documentation :: PHPDrone</title>
+    <title>Drone Plugin PHP SDK :: PHPDrone</title>
     
     
     <link href="/css/nucleus.css?1526852038" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/php-sdks/drone-plugin-sdk/">
     <nav id="sidebar" class="">
 
 
@@ -73,7 +73,7 @@
   
     
     <li data-nav-id="/php-sdks/" title="PHP SDKs" class="dd-item 
-        
+        parent
         
         
         ">
@@ -97,7 +97,7 @@
  
   
     
-      <li data-nav-id="/php-sdks/drone-plugin-sdk/" title="Drone Plugin PHP SDK" class="dd-item ">
+      <li data-nav-id="/php-sdks/drone-plugin-sdk/" title="Drone Plugin PHP SDK" class="dd-item active">
         <a href="/php-sdks/drone-plugin-sdk/">
         Drone Plugin PHP SDK
         
@@ -139,33 +139,81 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fa fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>PHPDrone documentation</a> > <a href='/php-sdks/'>PHP SDKs</a> > Drone Plugin PHP SDK
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
 
         
         <div id="body-inner">
           
+            <h1>Drone Plugin PHP SDK</h1>
+          
 
         
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fa fa-bars"></i> navigation</a>
-</span>
 
- 
+<p>Allows for creating PHP based plugins.</p>
+
+<pre><code class="language-php">&lt;?php
+require __DIR__.&quot;/vendor/autoload.php&quot;;
+
+// Get the build :
+$build = new \DronePluginSdk\Build();
+
+// Get some settings :
+var_dump($build-&gt;getPluginParameter('my_parameter'));```
+</code></pre>
+
+<p>Full API documentation is available at <a href="http://phpdrone.github.io/drone-plugin-sdk/">http://phpdrone.github.io/drone-plugin-sdk/</a></p>
 
 
-<h2 id="introduction">Introduction</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor. Porttitor eget dolor morbi non arcu risus quis. Sed nisi lacus sed viverra tellus in hac. Amet porttitor eget dolor morbi non. Eget arcu dictum varius duis. Leo duis ut diam quam. Aliquam nulla facilisi cras fermentum odio. Est ante in nibh mauris cursus mattis molestie a iaculis. Netus et malesuada fames ac turpis egestas maecenas. Quis hendrerit dolor magna eget est lorem ipsum. Est sit amet facilisis magna etiam tempor orci eu lobortis. Tempor orci eu lobortis elementum nibh. Tristique senectus et netus et malesuada.</p>
-
-<p>Egestas maecenas pharetra convallis posuere morbi leo urna. Volutpat consequat mauris nunc congue nisi. Amet nisl suscipit adipiscing bibendum est ultricies. Pellentesque sit amet porttitor eget. Maecenas sed enim ut sem viverra. Sit amet consectetur adipiscing elit duis. Sed pulvinar proin gravida hendrerit lectus. In fermentum posuere urna nec tincidunt. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Commodo quis imperdiet massa tincidunt. Risus pretium quam vulputate dignissim suspendisse in est. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Augue eget arcu dictum varius duis. Turpis nunc eget lorem dolor sed viverra ipsum. Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla.</p>
-
-<h2 id="resources">Resources</h2>
-
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla aliquet porttitor lacus luctus accumsan tortor. Porttitor eget dolor morbi non arcu risus quis. Sed nisi lacus sed viverra tellus in hac. Amet porttitor eget dolor morbi non. Eget arcu dictum varius duis. Leo duis ut diam quam. Aliquam nulla facilisi cras fermentum odio. Est ante in nibh mauris cursus mattis molestie a iaculis. Netus et malesuada fames ac turpis egestas maecenas. Quis hendrerit dolor magna eget est lorem ipsum. Est sit amet facilisis magna etiam tempor orci eu lobortis. Tempor orci eu lobortis elementum nibh. Tristique senectus et netus et malesuada.</p>
-
-<p>Egestas maecenas pharetra convallis posuere morbi leo urna. Volutpat consequat mauris nunc congue nisi. Amet nisl suscipit adipiscing bibendum est ultricies. Pellentesque sit amet porttitor eget. Maecenas sed enim ut sem viverra. Sit amet consectetur adipiscing elit duis. Sed pulvinar proin gravida hendrerit lectus. In fermentum posuere urna nec tincidunt. Eget est lorem ipsum dolor sit amet consectetur adipiscing. Commodo quis imperdiet massa tincidunt. Risus pretium quam vulputate dignissim suspendisse in est. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Augue eget arcu dictum varius duis. Turpis nunc eget lorem dolor sed viverra ipsum. Cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla.</p>
+<footer class=" footline" >
 	
-  
+</footer>
+
+
         
         </div> 
         
@@ -197,8 +245,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -213,6 +259,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -234,8 +281,8 @@
 
 
         
+            <a class="nav nav-prev" href="/php-sdks/" title="PHP SDKs"> <i class="fa fa-chevron-left"></i></a>
         
-            <a class="nav nav-next" href="/php-sdks/" title="PHP SDKs" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
