@@ -1,0 +1,18 @@
+pipeline:
+  hugo:
+    image: webhippie/hugo:latest
+    commands:
+      - "[ ! -d themes ] && mkdir themes && git clone https://github.com/matcornic/hugo-theme-learn.git themes/hugo-theme-learn"
+      - hugo
+
+  deploy-site:
+    image: fpfis/drone-plugin-git-deploy
+    source: public
+    target_repo: git@github.com:phpdrone/phpdrone.github.io.git
+    target_folder: site
+    clean: true
+    secrets: [ deploy_key ]
+    message: "Published ${DRONE_COMMIT_SHA} [CI SKIP]"
+    target_branch: master
+    excludes:
+      - CNAME

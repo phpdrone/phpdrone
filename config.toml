@@ -1,0 +1,4 @@
+baseURL = "https://phpdrone.github.io/"
+languageCode = "en-us"
+title = "PHPDrone"
+theme = "hugo-theme-learn"
