@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>PHP SDKs :: PHPDrone</title>
+    <title>Drone Client PHP SDK :: PHPDrone</title>
     
     
     <link href="/css/nucleus.css?1527009731" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/php-sdks/">
+  <body class="" data-url="/php-sdks/drone-client-sdk/">
     <nav id="sidebar" class="">
 
 
@@ -144,7 +144,7 @@
     
     <li data-nav-id="/php-sdks/" title="PHP SDKs" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/php-sdks/">
@@ -167,7 +167,7 @@
  
   
     
-      <li data-nav-id="/php-sdks/drone-client-sdk/" title="Drone Client PHP SDK" class="dd-item ">
+      <li data-nav-id="/php-sdks/drone-client-sdk/" title="Drone Client PHP SDK" class="dd-item active">
         <a href="/php-sdks/drone-client-sdk/">
         Drone Client PHP SDK
         
@@ -249,7 +249,13 @@
             
           
           
-            <a href='/'>PHPDrone documentation</a> > PHP SDKs
+            
+            
+          
+          
+            <a href='/'>PHPDrone documentation</a> > <a href='/php-sdks/'>PHP SDKs</a> > Drone Client PHP SDK
+          
+         
           
          
           
@@ -263,8 +269,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#plugin-sdk-php-sdks-drone-plugin-sdk"><a href="/php-sdks/drone-plugin-sdk">Plugin SDK</a></a></li>
-<li><a href="#client-sdk-https-github-com-gboddin-drone-php-client"><a href="https://github.com/gboddin/drone-php-client">Client SDK</a></a></li>
+<li><a href="#using-with-composer">Using with composer</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -279,7 +285,7 @@
         
         <div id="body-inner">
           
-            <h1>PHP SDKs</h1>
+            <h1>Drone Client PHP SDK</h1>
           
 
         
@@ -287,30 +293,46 @@
 
 
 
-<p>There are 2 SDKs availalbe to interact with Drone :</p>
-
-<h2 id="plugin-sdk-php-sdks-drone-plugin-sdk"><a href="/php-sdks/drone-plugin-sdk">Plugin SDK</a></h2>
-
-<p>The plugins SDK allows for easy creation of PHP based plugins.</p>
-
-<pre><code class="language-php">$build = new \DronePluginSdk\Build();
-</code></pre>
-
-<h2 id="client-sdk-https-github-com-gboddin-drone-php-client"><a href="https://github.com/gboddin/drone-php-client">Client SDK</a></h2>
-
-<p>The client SDK allows for interactions with Drone server.</p>
-
 <div class="notices warning" ><p>The client SDK is currently unstested an a work in progress</p>
 </div>
 
 
-<pre><code class="language-php">$api_instance = new DroneClient\Api\BuildsApi();
+<h2 id="using-with-composer">Using with composer</h2>
+
+<pre><code>$ composer require gboddin/php-drone-client
+</code></pre>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Please follow the <a href="#using-with-composer">installation procedure</a> and then run the following:</p>
+
+<pre><code class="language-php">&lt;?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: accessToken
+DroneClient\Configuration::getDefaultConfiguration()-&gt;setApiKey('access_token', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// DroneClient\Configuration::getDefaultConfiguration()-&gt;setApiKeyPrefix('access_token', 'Bearer');
+
+$api_instance = new DroneClient\Api\BuildsApi();
+$owner = &quot;owner_example&quot;; // string | owner of the repository
+$name = &quot;name_example&quot;; // string | name of the repository
+
+try {
+    $result = $api_instance-&gt;reposOwnerNameBuildsGet($owner, $name);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling BuildsApi-&gt;reposOwnerNameBuildsGet: ', $e-&gt;getMessage(), PHP_EOL;
+}
+
+?&gt;
 </code></pre>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -408,8 +430,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -427,6 +447,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -448,10 +471,10 @@
 
 
         
-            <a class="nav nav-prev" href="/drone-plugins/phar-composer/" title="PHAR Composer"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/php-sdks/" title="PHP SDKs"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/php-sdks/drone-client-sdk/" title="Drone Client PHP SDK" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/php-sdks/drone-plugin-sdk/" title="Drone Plugin PHP SDK" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
@@ -481,3 +504,4 @@
 
   </body>
 </html>
+

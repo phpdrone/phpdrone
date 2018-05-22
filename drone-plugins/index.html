@@ -9,7 +9,7 @@
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link rel="icon" href="/images/favicon.png" type="image/x-icon" />
-    <title>PHP SDKs :: PHPDrone</title>
+    <title>Drone plugins :: PHPDrone</title>
     
     
     <link href="/css/nucleus.css?1527009731" rel="stylesheet">
@@ -32,7 +32,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/php-sdks/">
+  <body class="" data-url="/drone-plugins/">
     <nav id="sidebar" class="">
 
 
@@ -73,8 +73,8 @@
   
     
     <li data-nav-id="/drone-plugins/" title="Drone plugins" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/drone-plugins/">
@@ -143,8 +143,8 @@
   
     
     <li data-nav-id="/php-sdks/" title="PHP SDKs" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/php-sdks/">
@@ -249,7 +249,7 @@
             
           
           
-            <a href='/'>PHPDrone documentation</a> > PHP SDKs
+            <a href='/'>PHPDrone documentation</a> > Drone plugins
           
          
           
@@ -263,8 +263,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#plugin-sdk-php-sdks-drone-plugin-sdk"><a href="/php-sdks/drone-plugin-sdk">Plugin SDK</a></a></li>
-<li><a href="#client-sdk-https-github-com-gboddin-drone-php-client"><a href="https://github.com/gboddin/drone-php-client">Client SDK</a></a></li>
+<li><a href="#composer-sa-checker-composer-sa-checker"><a href="composer-sa-checker">Composer SA Checker</a></a></li>
+<li><a href="#phar-composer-phar-composer"><a href="phar-composer">PHAR Composer</a></a></li>
 </ul></li>
 </ul>
 </nav>
@@ -279,7 +279,7 @@
         
         <div id="body-inner">
           
-            <h1>PHP SDKs</h1>
+            <h1>Drone plugins</h1>
           
 
         
@@ -287,24 +287,24 @@
 
 
 
-<p>There are 2 SDKs availalbe to interact with Drone :</p>
+<h2 id="composer-sa-checker-composer-sa-checker"><a href="composer-sa-checker">Composer SA Checker</a></h2>
 
-<h2 id="plugin-sdk-php-sdks-drone-plugin-sdk"><a href="/php-sdks/drone-plugin-sdk">Plugin SDK</a></h2>
+<p>Checks your composer.lock file for known security advisories with Sensiolab&rsquo;s SA checker.</p>
 
-<p>The plugins SDK allows for easy creation of PHP based plugins.</p>
-
-<pre><code class="language-php">$build = new \DronePluginSdk\Build();
+<pre><code class="language-yaml">pipeline:
+  composer-sa-check:
+    image: phpdrone/composer-sa-checker
+#   lock_file: composer.lock
 </code></pre>
 
-<h2 id="client-sdk-https-github-com-gboddin-drone-php-client"><a href="https://github.com/gboddin/drone-php-client">Client SDK</a></h2>
+<h2 id="phar-composer-phar-composer"><a href="phar-composer">PHAR Composer</a></h2>
 
-<p>The client SDK allows for interactions with Drone server.</p>
+<p>Creates a standalone PHAR file from a composer project.</p>
 
-<div class="notices warning" ><p>The client SDK is currently unstested an a work in progress</p>
-</div>
-
-
-<pre><code class="language-php">$api_instance = new DroneClient\Api\BuildsApi();
+<pre><code class="language-yaml">pipeline:
+  build-phar:
+    image: phpdrone/phar-composer
+    output: myapp.phar
 </code></pre>
 
 
@@ -343,57 +343,6 @@
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -441,6 +390,54 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
             
         
         
@@ -448,10 +445,10 @@
 
 
         
-            <a class="nav nav-prev" href="/drone-plugins/phar-composer/" title="PHAR Composer"> <i class="fa fa-chevron-left"></i></a>
+            <a class="nav nav-prev" href="/" title="PHPDrone documentation"> <i class="fa fa-chevron-left"></i></a>
         
         
-            <a class="nav nav-next" href="/php-sdks/drone-client-sdk/" title="Drone Client PHP SDK" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+            <a class="nav nav-next" href="/drone-plugins/composer-sa-checker/" title="Composer SA Checker" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
         
     </div>
 
