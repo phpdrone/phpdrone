@@ -3,10 +3,10 @@ date: 2018-20-05T10:21:05+02:00
 title: Composer SA Checker
 ---
 
-This plugim connects to Sensiolab Security Advisories, to check if your composer.lock
+This plugin connects to Sensiolab Security Advisories, to check if your composer.lock
 contains any reference to vulnerable components.
 
-## Usage:
+## Usage
 
 ```
 pipeline:
@@ -15,7 +15,7 @@ pipeline:
 #   lock_file: composer.lock
 ```
 
-Result :
+## Result
 
 ```
 Security Report
