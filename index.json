@@ -25,7 +25,7 @@
 	"title": "Composer SA Checker",
 	"tags": [],
 	"description": "",
-	"content": " This plugim connects to Sensiolab Security Advisories, to check if your composer.lock contains any reference to vulnerable components.\nUsage: pipeline: test-composer-deps: image: phpdrone/composer-sa-checker # lock_file: composer.lock  Result :\nSecurity Report =============== No known* vulnerabilities detected. * Disclaimer: This checker can only detect vulnerabilities that are referenced in the SensioLabs security advisories database.  "
+	"content": " This plugin connects to Sensiolab Security Advisories, to check if your composer.lock contains any reference to vulnerable components.\nUsage pipeline: test-composer-deps: image: phpdrone/composer-sa-checker # lock_file: composer.lock  Result Security Report =============== No known* vulnerabilities detected. * Disclaimer: This checker can only detect vulnerabilities that are referenced in the SensioLabs security advisories database.  "
 },
 {
 	"uri": "https://phpdrone.github.io/drone-plugins/",
